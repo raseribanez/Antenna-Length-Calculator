@@ -1,0 +1,23 @@
+Written By Ben Woodfield (raserppsprograms@gmail.com)
+
+Designed to be a simple tool for general antenna design across a wide rabge of frequencies.
+A follow up version for each one will be compiled as .exe files - to cater for non-linux and non-python systems 
+(Windows users without Python installed
+
+163-CT-160 - Charlie Tango
+163-DR-663 - Delta Romeo
+
+You will need Python 2 Installed to run these versions (written on 2.7.9)
+
+Antenna Calculations
+
+585 / MHz (feet) for 5/8
+468 / MHz (feet) for 1/2
+234 / MHz (feet) for 1/4
+1005 / MHz (feet) for full loop
+
+Feet to meters calculation
+
+feet / 3.28 = meters
+feet x 0.3048 = meters
+
