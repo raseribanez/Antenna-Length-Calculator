@@ -29,7 +29,7 @@ The calculations used in the programs are below:
 Antenna Calculations:
 
 585 / MHz = feet (for 5/8)
-468 / MHz = feet (for 1/2)
+1/2 wave: (234 % MHz = feet), 1/2 wave: (71.3232 % MHz = meters)
 234 / MHz = feet (for 1/4)
 1005 / MHz = feet (for full loop)
 
