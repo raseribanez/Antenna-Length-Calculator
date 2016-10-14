@@ -1,6 +1,6 @@
 #!/usr/bin/env/python
 # Ben Woodfield - Simple layout, 1/2 WaveLength Antenna Length Calculator
-# Vertical Antenna 1/2 wave: (234 % MHz = feet), 1/2 wave: (71.3232 % MHz = meters)
+# Vertical Antenna (5/8): (585 % MHz = feet), 1/2 wave: (178.3080 % MHz = meters)
 
 # NOTE
 # 585/MHz (feet) for 5/8
