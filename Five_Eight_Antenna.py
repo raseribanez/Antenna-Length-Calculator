@@ -1,14 +1,5 @@
-#!/usr/bin/env/python
-# Ben Woodfield - Simple layout, 1/2 WaveLength Antenna Length Calculator
-# Vertical Antenna (5/8): (585 % MHz = feet), 1/2 wave: (178.3080 % MHz = meters)
-
-# NOTE
-# 585/MHz (feet) for 5/8
-# 468/MHz (feet) for 1/2
-# 234/MHz (feet) for 1/4
-# 1005/MHz (feet) for full loop
-
-# Feet to meters Calculator > (Feet % 3.28 = Meters...or... Feet x 0.3048)
+# Ben Woodfield
+# 5/8 Wave-Length Vertical Antenna Calculator
 
 from Tkinter import *
 
@@ -23,13 +14,13 @@ cvt_to = StringVar()
 
 def calculate_qtr_feet():
     freq_val = float(cvt_from.get())
-    qtr_wav = 585/freq_val  # 1/4 wave feet calculation
-    cvt_to.set('%s Feet > 1/4 WaveLength' % qtr_wav)
+    qtr_wav = 585/freq_val  # 5/8 wave feet calculation
+    cvt_to.set('%s Feet > 5/8 WaveLength' % qtr_wav)
     
 def calculate_qtr_meter():
     freq_val2 = float(cvt_from.get())
     qtr_wave = 178.3080/freq_val2  # 1/4 wave meters calculation
-    cvt_to.set('%s Meters > 1/4 WaveLength' % qtr_wave)
+    cvt_to.set('%s Meters > 5/8 WaveLength' % qtr_wave)
     
 lbl_info = Label(top, text='Enter Frequency in MHz', fg='blue', bg='DarkGrey', font='freesansbold,16') 
 lbl_info.pack()
