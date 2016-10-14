@@ -1,16 +1,6 @@
 #!/usr/bin/env/python
 # Ben Woodfield - Simple layout, 1/2 WaveLength Antenna Length Calculator
-# (Vertical Antenna)
-# 1/2 wave: (234 % MHz = feet)
-# 1/2 wave: (71.3232 % MHz = meters)
-
-# NOTE
-# 585/MHz (feet) for 5/8
-# 468/MHz (feet) for 1/2
-# 234/MHz (feet) for 1/4
-# 1005/MHz (feet) for full loop
-
-# Feet to meters Calculator > (Feet % 3.28 = Meters...or... Feet x 0.3048)
+# Vertical Antenna (Full Wave Loop), 1005 % MHz = feet),(306.324 % MHz = meters)
 
 from Tkinter import *
 
@@ -25,13 +15,13 @@ cvt_to = StringVar()
 
 def calculate_qtr_feet():
     freq_val = float(cvt_from.get())
-    qtr_wav = 1005/freq_val  # 1/4 wave feet calculation
-    cvt_to.set('%s Feet > 1/4 WaveLength' % qtr_wav)
+    qtr_wav = 1005/freq_val  # Full wave loop feet calculation
+    cvt_to.set('%s Feet > Full WaveLength' % qtr_wav)
     
 def calculate_qtr_meter():
     freq_val2 = float(cvt_from.get())
-    qtr_wave = 306.324/freq_val2  # 1/4 wave meters calculation
-    cvt_to.set('%s Meters > 1/4 WaveLength' % qtr_wave)
+    qtr_wave = 306.342/freq_val2  # Full wave loop meters calculation
+    cvt_to.set('%s Meters > Full WaveLength' % qtr_wave)
     
 lbl_info = Label(top, text='Enter Frequency in MHz', fg='blue', bg='DarkGrey', font='freesansbold,16') 
 lbl_info.pack()
@@ -47,11 +37,3 @@ convert_btn.pack()
 
 convert_btn = Button(top, text='Calculate Antenna (Feet)', fg='blue', font='freesansbold, 14', command=calculate_qtr_feet)
 convert_btn.pack()
-
-lbl_result = Label(top, textvariable=cvt_to, relief='ridge', font='freesansbold, 14', bg='Grey', fg='Blue')
-lbl_result.pack(fill=BOTH, expand=1)
-
-q = Button(top, text='Exit', command=quit, bg='DarkGrey', fg='red', font='freesansbold, 14') 
-q.pack(side=BOTTOM, fill=X)
-
-top.mainloop()
