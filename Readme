@@ -26,9 +26,9 @@ Written on 2.7.9, also runs ok on 2.7.11.
 The calculations used in the programs are below:
 
 
-Antenna Calculations:
+Vertical Antenna Calculations:
 
-585 / MHz = feet (for 5/8)
+5/8 wave: (585 % MHz = feet), 1/2 wave: (178.3080 % MHz = Meters)
 1/2 wave: (234 % MHz = feet), 1/2 wave: (71.3232 % MHz = meters)
 234 / MHz = feet (for 1/4)
 1005 / MHz = feet (for full loop)
