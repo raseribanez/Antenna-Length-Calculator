@@ -37,3 +37,11 @@ convert_btn.pack()
 
 convert_btn = Button(top, text='Calculate Antenna (Feet)', fg='blue', font='freesansbold, 14', command=calculate_qtr_feet)
 convert_btn.pack()
+
+lbl_result = Label(top, textvariable=cvt_to, relief='ridge', font='freesansbold, 14', bg='Grey', fg='Blue')
+lbl_result.pack(fill=BOTH, expand=1)
+
+q = Button(top, text='Exit', command=quit, bg='DarkGrey', fg='red', font='freesansbold, 14') 
+q.pack(side=BOTTOM, fill=X)
+
+top.mainloop()
