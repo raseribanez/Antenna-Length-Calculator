@@ -1,63 +1,47 @@
-#!/usr/bin/env python
+#!/usr/bin/env/python
+# Ben Woodfield - Simple layout, 1/2 WaveLength Antenna Length Calculator
+# Vertical Antenna (1/2), 468 % MHz = feet), 1/2 wave: (142.6464 % MHz = meters)
 
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+from Tkinter import *
 
-# PiVFO Version 0.1
-# A GUI for freq_pi
-# Jenny List G7CKF
-# http://www.languagespy.com
+top = Tk()
+top.minsize(450,350)
+top.title(' 1/2 Wave Antenna Calculator')
+top.configure(bg='DarkGrey')
 
-import time
-import math
-import subprocess
+cvt_from = StringVar()
+cvt_to = StringVar()
 
-#import and rename the 'tkinter' module for < Python 3.3:
-import Tkinter as tkinter
 
-#Initial frequency, variable then holds VFO frequency
-vfoFreq = 14000000
-#VFO state
-vfoState = False
+def calculate_qtr_feet():
+    freq_val = float(cvt_from.get())
+    qtr_wav = 468/freq_val  # 1/2 wave feet calculation
+    cvt_to.set('%s Feet > 1/2 WaveLength' % qtr_wav)
+    
+def calculate_qtr_meter():
+    freq_val2 = float(cvt_from.get())
+    qtr_wave = 142.6464/freq_val2  # 1/2 wave meters calculation
+    cvt_to.set('%s Meters > 1/2 WaveLength' % qtr_wave)
+    
+lbl_info = Label(top, text='Enter Frequency in MHz', fg='blue', bg='DarkGrey', font='freesansbold,16') 
+lbl_info.pack()
 
-#Max frequency 250MHz
-maxFreq = 250000000
-#Min frequency is 125kHz
-minFreq = 125000
+freq_input = Entry(top, font='freesansbold, 14', relief='raised', textvariable=cvt_from)
+freq_input.pack()
 
-#Location of freq_pi 
-freqgen = "./freq_pi"
+lbl_2 = Label(top,text='Click "Calculate" to get results', fg='blue', bg='DarkGrey', font='freesansbold,16')
+lbl_2.pack()
 
-def doQuitEvent(key):
-	c.resetty() # set terminal settings
-	c.endwin()  # end curses session
-	subprocess.call([freqgen, "-q"]) #Turn off the clock
-	raise SystemExit
+convert_btn = Button(top, text='Calculate Antenna (Meters)', fg='blue', font='freesansbold, 14', command=calculate_qtr_meter)
+convert_btn.pack()
 
-#VFO on and off
-def vfoOnFunc():
-	global vfoState
-	subprocess.call([freqgen, "-f", str(vfoFreq)])
-	vfoState = True
-	vfoOnButton['state'] = 'disabled'
-	vfoOffButton['state'] = 'normal'
+convert_btn = Button(top, text='Calculate Antenna (Feet)', fg='blue', font='freesansbold, 14', command=calculate_qtr_feet)
+convert_btn.pack()
 
-def vfoOffFunc():
-	global vfoState
-	subprocess.call([freqgen, "-q"])
-	vfoState = False
-	vfoOnButton['state'] = 'normal'
-	vfoOffButton['state'] = 'disabled'
+lbl_result = Label(top, textvariable=cvt_to, relief='ridge', font='freesansbold, 14', bg='Grey', fg='Blue')
+lbl_result.pack(fill=BOTH, expand=1)
 
-#Change frequency
-de
+q = Button(top, text='Exit', command=quit, bg='DarkGrey', fg='red', font='freesansbold, 14') 
+q.pack(side=BOTTOM, fill=X)
+
+top.mainloop()
