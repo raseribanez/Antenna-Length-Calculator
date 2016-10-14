@@ -10,8 +10,8 @@ You simply enter your desired frequency and the vertical wavelength by clicking 
 yourpreferences are. If you have a frequency range or band you wish to use, I would take the lowest frequency and highest frequency
 for the range you want, and work out the average / mid-way point, then make adjustments from there.
 
-NOTE this is just to get an idea of the wavelength's for specific frequencies - if used for Antenna design, you should know
-that different frequencies(wavelengths) have different antenna systems that work better than others, 
+NOTE this is just to get an idea of the wavelengths for specific frequencies - if used for Antenna design, you should know
+that different frequencies(wavelengths) have different antenna systems that work better on some than others, 
 e.g: I would make a dipole for the 1/2 wavelength at CB frequencies around 27 MHz, and use it as a vertical dipoole, 
 not horizontal. 
 
@@ -25,12 +25,14 @@ Written on 2.7.9, also runs ok on 2.7.11.
 
 The calculations used in the programs are below:
 
+
 Antenna Calculations:
 
-585 / MHz (feet) for 5/8
-468 / MHz (feet) for 1/2
-234 / MHz (feet) for 1/4
-1005 / MHz (feet) for full loop
+585 / MHz = feet (for 5/8)
+468 / MHz = feet (for 1/2)
+234 / MHz = feet (for 1/4)
+1005 / MHz = feet (for full loop)
+
 
 Feet to meters calculation
 
