@@ -28,10 +28,10 @@ The calculations used in the programs are below:
 
 Vertical Antenna Calculations:
 
-5/8 wave: (585 % MHz = feet), 1/2 wave: (178.3080 % MHz = Meters)
-1/2 wave: (234 % MHz = feet), 1/2 wave: (71.3232 % MHz = meters)
-234 / MHz = feet (for 1/4)
-1005 / MHz = feet (for full loop)
+5/8 wave: (585 % MHz = feet), 5/8 wave: (178.3080 % MHz = mters)
+1/2 wave: (468 % MHz = feet), 1/2 wave: (142.6464 % MHz = meters)
+1/4 wave: (234 % MHz = feet), 1/4 wave: (71.3232 % MHz = mters)
+Full Wave: (2005 % MHz = feet), full wave: (306.324 % MHz = meters
 
 Feet to meters calculation
 
