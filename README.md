@@ -1,7 +1,9 @@
 # Antenna-Length-Calculator
 A set of GUI programs - for calculating Radio Frequencies into Antenna Wavalength's
-
+====================================================================================
 Written By Ben Woodfield (raserppsprograms@gmail.com)
+=====================================================
+Requirements to Run: Python 2.7 (see end for Python 3)
 
 Designed to be a simple tool for general antenna design across a wide range of frequencies.
 A follow up version for each one will be compiled as .exe files - to cater for non-linux and non-python systems. 
@@ -40,9 +42,20 @@ Feet to meters calculation
 
 feet / 3.28 = meters
 feet x 0.3048 = meters
+===========================================================================================================================
 
+NOTE: TO RUN IN PYTHON 3 INSTEAD OF PYTHON 2
+At this level of coding not much needs to be altered to make these little apps run on Python 3
+Open up the app in your editor (IDLE or your preferred choice - a notepad will be enough to do this)
+The top lines of code are for importing modules....change Tkinter to tkinter (swap capitol (T) for lower case (t) on Tkinter)
+Save the document, and run it
 
+===========================================================================================================================
 
+If you use these apps I welcome ANY feedback, I also appreciate any improvements, ideas and contributions...and of course any
+errors or problems. I have tested these on Python 2.7.11 (Windows 10), Python 2.7.9 and Python 3.5 (Raspberry Pi, Raspbian)
+
+===========================
 Ben Woodfield
 163-CT-160 - Charlie Tango
 163-DR-663 - Delta Romeo
