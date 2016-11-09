@@ -3,6 +3,8 @@ A set of GUI programs - for calculating Radio Frequencies into Antenna Wavalengt
 ====================================================================================
 Written By Ben Woodfield (raserppsprograms@gmail.com)
 =====================================================
+Coming Soon (In progress - All in One Antenna Calculator - so not in seperate programs)
+
 Requirements to Run: Python 2.7 (see end for Python 3)
 
 Designed to be a simple tool for general antenna design across a wide range of frequencies.
